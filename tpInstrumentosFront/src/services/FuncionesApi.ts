@@ -1,8 +1,45 @@
-import Instrumento from "../entities/Instrumento";
 
+export function getAllInstrumentos(){
+    return fetch(`http://localhost:9000/api/instrumentos`)
+            .then(res=>res.json())
+            .then(json=>json)
+}
 
+/*export function getOneInstrumento(id:number){
+    return fetch(`http://localhost:9000/api/instrumentos/${id}`)
+            .then(res=>res.json())
+            .then(json=>json)
+}
 
-export function getInstrumentosJSON() {
+export function deleteInstrumento(id:number) {
+    return fetch(`http://localhost:9000/api/instrumentos/${id}`, {
+        method: 'DELETE'
+    })
+}
+
+export function updateInstrumento(id: number, instrumento: any) {
+    return fetch(`http://localhost:9000/api/instrumentos/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(instrumento)
+    })
+}
+
+export async function saveInstrumento(data: Instrumento): Promise<Instrumento> {
+    const response = await fetch( "http://localhost:9000/api/instrumentos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const newData = await response.json();
+    return newData as Instrumento;
+}*/
+
+/*export function getInstrumentosJSON() {
 
 	let datos: Instrumento[] = [
 		{
@@ -129,4 +166,4 @@ export function getInstrumentosJSON() {
 
 	return datos
 
-}
+}*/

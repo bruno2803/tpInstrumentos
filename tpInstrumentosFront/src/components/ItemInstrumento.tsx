@@ -3,9 +3,9 @@ import "../styles/styles.css"
 type InstrumentoParams = {
     id: number;
     instrumento: string;
-    /*marca: string;*/
+    marca: string;
     modelo: string;
-    imagenInstrumento: string;
+    imagen: string;
     precio: number;
     costoEnvio: string;
     cantidadVendida: string;
@@ -24,7 +24,7 @@ type InstrumentoParams = {
       <>
           <div className="card">
             <div className="card-box-image">
-              <img src={args.imagenInstrumento} alt={args.imagenInstrumento} className='card-img' />
+              <img src={args.imagen} alt={args.imagen} className='card-img' />
             </div>
             <div className="card-body">
               <h5 className="card-title">{args.instrumento}({args.modelo})</h5>
