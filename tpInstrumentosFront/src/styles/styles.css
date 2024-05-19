@@ -1,0 +1,61 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 60vw;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.card-box-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.card-img {
+  width: 40%;
+}
+
+.card-body {
+  padding: 10px;
+  width: 50%;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.envioGratis {
+  display: flex;
+  color: green;
+  align-items: center;
+}
+
+.envioPago {
+  display: flex;
+  color: orange;
+  align-items: center;
+}
+
+.span {
+  padding-right: 5px;
+}
