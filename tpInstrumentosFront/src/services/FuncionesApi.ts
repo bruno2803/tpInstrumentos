@@ -1,3 +1,4 @@
+import Instrumento from "../entities/Instrumento";
 
 export function getAllInstrumentos(){
     return fetch(`http://localhost:9000/api/instrumentos`)
@@ -5,7 +6,7 @@ export function getAllInstrumentos(){
             .then(json=>json)
 }
 
-/*export function getOneInstrumento(id:number){
+export function getOneInstrumento(id:number){
     return fetch(`http://localhost:9000/api/instrumentos/${id}`)
             .then(res=>res.json())
             .then(json=>json)
@@ -37,7 +38,7 @@ export async function saveInstrumento(data: Instrumento): Promise<Instrumento> {
     });
     const newData = await response.json();
     return newData as Instrumento;
-}*/
+}
 
 /*export function getInstrumentosJSON() {
 

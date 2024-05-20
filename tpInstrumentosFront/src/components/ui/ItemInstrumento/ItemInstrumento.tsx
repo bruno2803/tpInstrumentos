@@ -1,4 +1,4 @@
-import "../styles/styles.css"
+import { Button } from "react-bootstrap";
 
 type InstrumentoParams = {
     id: number;
@@ -10,15 +10,17 @@ type InstrumentoParams = {
     costoEnvio: string;
     cantidadVendida: string;
     descripcion: string;
-    initialEnvio: boolean;
   }
   
   function ItemInstrumento(args: InstrumentoParams) {
     
-    const envio = args.initialEnvio ? `Costo de Envio Interior de Argentina: $${args.costoEnvio}` : 'Envio gratis a todo el pais' ;
-    const envioClassName = args.initialEnvio
-      ? 'envioPago'
-      : 'envioGratis';
+    const envio =
+    args.costoEnvio === "G"
+      ? "Envio gratis a todo el pais"
+      : `Costo de envio al interior de Argentina $${args.costoEnvio}`;
+    const envioClassName = args.costoEnvio === "G"
+      ? 'envioGratis'
+      : 'envioPago';
   
     return (
       <>
@@ -31,6 +33,9 @@ type InstrumentoParams = {
               <p className="card-price">${args.precio}</p>
               <p className={envioClassName}> <span className="material-symbols-outlined span">local_shipping</span> {envio}</p>
               <p className="card-description">{args.cantidadVendida} vendidos</p>
+            </div>
+            <div className="card-button">
+              <Button variant="primary" className="button" href={`productoDetalle/${args.id}`}>Ver detalle</Button>
             </div>
           </div>
       </>
