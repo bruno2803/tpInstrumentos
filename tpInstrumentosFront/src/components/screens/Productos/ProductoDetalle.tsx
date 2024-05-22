@@ -29,9 +29,7 @@ export const ProductoDetalle = () => {
 
     return (
         <>
-            <div>
-                <Header />
-            </div>
+            <Header />
             <div className="card-productoDetalle">
                 <div className="row g-0">
                     <div className="col-md-4">

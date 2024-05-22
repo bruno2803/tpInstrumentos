@@ -12,6 +12,12 @@ export function getOneInstrumento(id:number){
             .then(json=>json)
 }
 
+export function getAllCategorias(){
+    return fetch(`http://localhost:9000/api/categorias`)
+            .then(res=>res.json())
+            .then(json=>json)
+}
+
 export function deleteInstrumento(id:number) {
     return fetch(`http://localhost:9000/api/instrumentos/${id}`, {
         method: 'DELETE'

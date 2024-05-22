@@ -1,3 +1,4 @@
+import Categoria from "./Categoria";
 
 export default class Instrumento {
 
@@ -10,7 +11,6 @@ export default class Instrumento {
 	costoEnvio: string = "";
 	cantidadVendida: string = "";
 	descripcion: string = "";
-	initialEnvio: string = "";
-	urlImagenPath?: string = "";
+	categoria = new Categoria();
 
 }

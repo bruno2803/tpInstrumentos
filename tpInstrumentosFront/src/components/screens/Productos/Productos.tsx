@@ -21,9 +21,7 @@ function Productos() {
 
     return (
         <>
-        <div>
         <Header />
-        </div>
         <div className='cards-container'>
           <div>
           {instrumentos.map((ins:Instrumento) => 

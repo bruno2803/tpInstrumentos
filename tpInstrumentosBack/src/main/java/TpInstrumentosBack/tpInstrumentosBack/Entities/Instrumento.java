@@ -1,6 +1,8 @@
 package TpInstrumentosBack.tpInstrumentosBack.Entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,5 +25,8 @@ public class Instrumento extends Base{
     private String costoEnvio;
     private String cantidadVendida;
     private String descripcion;
-    private String InitialEnvio;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "idCategoria")
+    private Categoria categoria;
 }
