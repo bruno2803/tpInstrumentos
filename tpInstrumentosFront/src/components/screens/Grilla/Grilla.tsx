@@ -10,9 +10,7 @@ export const Grilla = () => {
 
     const [instrumentos, setInstrumentos] = useState<Instrumento[]>([]);
     const [categorias, setCategorias] = useState<Categorias[]>([]);
-    {
-        /*Nota: Primero correr Json server con npm run server*/
-    }
+   
     const getInstrumentos = async () => {
         const datos: Instrumento[] = await getAllInstrumentos();
         setInstrumentos(datos);
@@ -47,14 +45,27 @@ export const Grilla = () => {
         : instrumentos;
 
 
-
     return (
         <>
             <Header />
             <div className="grillaContainer">
-                <div className="btnAgregar">
-                    <Button variant="primary"><span className="material-symbols-outlined">add</span></Button>
+                <div className="DivBtnAgregar">
+                    <Button variant="primary" href={'/FormularioInstrumento/0'} className="btnAgregar"><span className="material-symbols-outlined">add</span></Button>
                 </div>
+
+                <div className="categoriaSeleccionada">
+                  <select value={categoriaFiltro} onChange={handleChangeCategoria} className="select">
+                  <option value="">Todas las categorías</option>
+                  {Array.from(
+                   new Set(categorias.map((categoria) => categoria.denominacion))
+                  ).map((denominacion) => (
+                  <option key={denominacion} value={denominacion}>
+                   {denominacion}
+                  </option>
+                  ))}
+                  </select>
+                </div>
+
                 <div className="tabla">
                     <div className="row">
                         <div className="col">
@@ -107,6 +118,7 @@ export const Grilla = () => {
                                 <div className="col">
                                     <a
                                         className="btn btn-danger"
+                                        style={{ marginLeft: 15 }}
                                         onClick={() => deleteInstru(ins.id)}
                                     >
                                         <span className="material-symbols-outlined">delete</span>

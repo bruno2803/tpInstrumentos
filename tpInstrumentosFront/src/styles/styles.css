@@ -126,11 +126,30 @@
   margin: 20px;
 }
 
-.btnAgregar {
+.DivBtnAgregar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 30px 30px;
+}
+
+.btnAgregar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 50px;
+}
+
+.categoriaSeleccionada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.select {
+  width: 30%;
 }
 
 .tabla {
@@ -143,5 +162,20 @@
 .grilla {
   margin-top: 20px;
   padding: 10px;
+}
+
+/*FORMULARIOINSTRUMENTO*/
+
+.formularioContainer {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10px;
+  border: solid 1px rgb(185, 185, 185);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.btnFormularioAgregar {
+  margin-left: 45%;
 }
 

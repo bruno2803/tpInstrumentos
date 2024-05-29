@@ -7,6 +7,7 @@ import ProductoDetalle from './components/screens/Productos/ProductoDetalle'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Productos from './components/screens/Productos/Productos'
 import { Grilla } from './components/screens/Grilla/Grilla'
+import { FormularioInstrumento } from './components/screens/FormularioInstrumento/FormularioInstrumento'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Route path='/productos' element={<Productos />}/>
       <Route path='/productoDetalle/:id' element={<ProductoDetalle/>}/>
       <Route path='/grilla' element={<Grilla />}/>
+      <Route path='/FormularioInstrumento/:id' element={<FormularioInstrumento />}/>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
