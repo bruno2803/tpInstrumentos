@@ -48,7 +48,7 @@ export const Grilla = () => {
     return (
         <>
             <Header />
-            <div className="grillaContainer">
+            <div className="grillaContainer" style={{ marginTop: '100px' }}>
                 <div className="DivBtnAgregar">
                     <Button variant="primary" href={'/FormularioInstrumento/0'} className="btnAgregar"><span className="material-symbols-outlined">add</span></Button>
                 </div>
@@ -110,7 +110,7 @@ export const Grilla = () => {
                                     <a
                                         className="btn btn-info"
                                         style={{ marginLeft: 15 }}
-                                        href={`/Agregar/` + ins.id}
+                                        href={`/FormularioInstrumento/` + ins.id}
                                     >
                                         <span className="material-symbols-outlined">edit</span>
                                     </a>

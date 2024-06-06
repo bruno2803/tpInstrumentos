@@ -1,4 +1,7 @@
 import Instrumento from "../entities/Instrumento";
+import Pedido from "../entities/Pedido";
+import PedidoDetalle from "../entities/PedidoDetalle";
+
 
 export function getAllInstrumentos(){
     return fetch(`http://localhost:9000/api/instrumentos`)
@@ -44,6 +47,36 @@ export async function saveInstrumento(data: Instrumento): Promise<Instrumento> {
     });
     const newData = await response.json();
     return newData as Instrumento;
+}
+
+export async function savePedidoDetalle(data: PedidoDetalle): Promise<PedidoDetalle> {
+    const response = await fetch( "http://localhost:9000/api/pedidoDetalle", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const newData = await response.json();
+    return newData as PedidoDetalle;
+}
+
+export async function savePedido(data: Pedido): Promise<Pedido> {
+    const response = await fetch( "http://localhost:9000/api/pedidos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const newData = await response.json();
+    return newData as Pedido;
+}
+
+export function getAllPedidos(){
+    return fetch(`http://localhost:9000/api/pedidos`)
+            .then(res=>res.json())
+            .then(json=>json)
 }
 
 /*export function getInstrumentosJSON() {

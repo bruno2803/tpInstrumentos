@@ -11,6 +11,7 @@ export default class Instrumento {
 	costoEnvio: string = "";
 	cantidadVendida: string = "";
 	descripcion: string = "";
+	cantidad: number = 1;
 	categoria = new Categoria();
 
 }

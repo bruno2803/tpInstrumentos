@@ -179,3 +179,24 @@
   margin-left: 45%;
 }
 
+/*CARRITO*/
+
+.containerCarrito {
+  max-height: 20px;
+  margin-top: 60px;
+  display: flex;
+}
+
+.divVisible{
+  visibility:visible;
+}
+
+.divInvisible{
+  visibility:hidden;
+}
+
+.h3 {
+  margin-top: 150px;
+  margin-left: 42%; 
+}
+

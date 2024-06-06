@@ -8,10 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Productos from './components/screens/Productos/Productos'
 import { Grilla } from './components/screens/Grilla/Grilla'
 import { FormularioInstrumento } from './components/screens/FormularioInstrumento/FormularioInstrumento'
+import { CarritoContextProvider } from './context/CarritoContext'
+import { Carrito } from './components/screens/Carrito/Carrito'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
+    <CarritoContextProvider>
     <Routes>
       <Route index element={<Home/>}/>
       <Route path='/home' element={<Home />}/>
@@ -20,7 +23,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Route path='/productoDetalle/:id' element={<ProductoDetalle/>}/>
       <Route path='/grilla' element={<Grilla />}/>
       <Route path='/FormularioInstrumento/:id' element={<FormularioInstrumento />}/>
+      <Route path="/carrito" element={<Carrito />}></Route>
     </Routes>
+    </CarritoContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

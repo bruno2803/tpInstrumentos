@@ -5,7 +5,7 @@ export const DondeEstamos = () => {
     return (
         <>
             <Header />
-            <div className="titleContainer">
+            <div className="titleContainer" style={{ marginTop: '100px' }}>
                 <h1>¿Donde estamos?</h1>
             </div>
             <div className="mapa">

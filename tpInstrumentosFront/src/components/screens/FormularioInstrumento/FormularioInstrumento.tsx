@@ -77,6 +77,10 @@ export const FormularioInstrumento = () => {
       <div className="formularioContainer">
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>{ id ? 'Agregar instrumento' : 'Modificar instrumento' }</Form.Label>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
             <Form.Control
               type="text"
