@@ -1,4 +1,5 @@
 import Instrumento from "../entities/Instrumento";
+import PreferenceMp from "../entities/MercadoPago/PreferenceMp";
 import Pedido from "../entities/Pedido";
 import PedidoDetalle from "../entities/PedidoDetalle";
 
@@ -77,6 +78,19 @@ export function getAllPedidos(){
     return fetch(`http://localhost:9000/api/pedidos`)
             .then(res=>res.json())
             .then(json=>json)
+}
+
+export async function createPreferenceMP(pedido?:Pedido){
+    let urlServer = "http://localhost:9000/api/pedidos/create_preference_mp";
+	let method:string = "POST";
+    const response = await fetch(urlServer, {
+	  "method": method,
+	  "body": JSON.stringify(pedido),
+	  "headers": {
+		"Content-Type": 'application/json'
+	  }
+	});
+    return await response.json() as PreferenceMp;   
 }
 
 /*export function getInstrumentosJSON() {

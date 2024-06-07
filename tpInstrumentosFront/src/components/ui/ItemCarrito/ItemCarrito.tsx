@@ -2,6 +2,7 @@ import Instrumento from "../../../entities/Instrumento";
 import { useCarrito } from "../../../hooks/useCarrito";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
+import "../../../styles/styles.css";
 
 type InstrumentoParams = {
   id: number;
@@ -40,6 +41,7 @@ function ItemCarrito(args: InstrumentoParams) {
               src={args.imagen}
               className="img-fluid rounded-start"
               alt="..."
+              style={{width:'500px'}}
             ></img>
           </div>
           <div className="col-md-8">
@@ -63,18 +65,14 @@ function ItemCarrito(args: InstrumentoParams) {
                 <RemoveIcon />
               </a>
               <a
-                className="btn btn-primary"
+                className="btn btnBorrarItemBackG"
                 onClick={() => {
                   isPlatoInCarrito
                     ? removeCarrito(args.InstrumentoObject)
                     : addCarrito(args.InstrumentoObject);
                 }}
               >
-                {isPlatoInCarrito ? (
-                  <i className="fas fa-cart-arrow-down"></i>
-                ) : (
-                  <i className="fas fa-shopping-cart"></i>
-                )}
+                <span className="material-symbols-outlined btnBorrarItemColor">delete</span>
               </a>
               <a
                 className="btn btn-primary"

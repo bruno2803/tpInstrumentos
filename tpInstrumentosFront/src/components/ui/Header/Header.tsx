@@ -30,7 +30,8 @@ export const Header = () => {
                 <Nav.Link href="/dondeEstamos">¿Donde estamos?</Nav.Link>
                 <Nav.Link href="/productos">Productos</Nav.Link>
                 <Nav.Link href="/grilla">Grilla</Nav.Link>
-                <Nav.Link href="/carrito" style={{marginLeft:'698px'}}>
+                <Nav.Link href="/pedidos">Pedidos</Nav.Link>
+                <Nav.Link href="/carrito" style={{marginLeft:'650px'}}>
                 <span className="material-symbols-outlined">shopping_cart</span>
                 {tiene && (
                 <span className="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">

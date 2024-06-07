@@ -104,12 +104,12 @@ export const Carrito = () => {
   return (
     <>
       <Header/>
-      <div className="containerCarrito" style={{ marginTop: '100px' }}>
+      <div className="containerCarrito" style={{ display: 'block', marginTop: '120px', marginLeft:'270px' }}>
         <div className={cart.length > 0 ? "divVisible" : "divInvisible"}>
           <Button
             variant="outlined"
             size="small"
-            style={{ marginLeft: "auto" }}
+            style={{ marginLeft: "26%" }}
             onClick={limpiarCarrito}
           >
             Vaciar carrito
@@ -117,14 +117,13 @@ export const Carrito = () => {
           <Button
             variant="outlined"
             size="small"
-            style={{ marginLeft: "auto" }}
+            style={{ margin:'5px' }}
             onClick={Envios}
           >
             Enviar Pedido
           </Button>
         </div>
-      </div>
-      {cart.length === 0 ? (
+        {cart.length === 0 ? (
         <h3 className="h3">El carrito está vacío</h3>
       ) : (
         cart.map((instru: Instrumento) => (
@@ -144,6 +143,7 @@ export const Carrito = () => {
           ></ItemCarrito>
         ))
       )}
+      </div>
     </>
   );
 };

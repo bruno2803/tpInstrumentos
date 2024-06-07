@@ -197,6 +197,25 @@
 
 .h3 {
   margin-top: 150px;
-  margin-left: 42%; 
+  margin-left: 28%; 
 }
 
+/*ITEMCARRITO*/
+
+.btnBorrarItemBackG {
+  background: red;
+}
+
+.btnBorrarItemColor {
+  color: black;
+}
+
+/*PEDIDOS*/
+
+.titleSinPedidos {
+  margin-left: 500px;
+}
+
+.containerItemPedido {
+  margin-left: 270px;
+}
