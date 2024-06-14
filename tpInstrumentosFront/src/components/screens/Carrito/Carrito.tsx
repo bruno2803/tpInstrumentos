@@ -84,7 +84,7 @@ export const Carrito = () => {
       return;
     }
     console.log("Pedido enviado");
-    alert("Pedido " + pedido.id + " enviado con éxito");
+    alert("Pedido enviado con éxito");
     savePedido(pedido);
     limpiarCarrito();
   };
