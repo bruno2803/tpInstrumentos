@@ -34,6 +34,19 @@ dependencies {
 	//Mercadopago
 	implementation 'com.mercadopago:sdk-java:2.1.24'
 
+	//Excel
+	implementation 'org.apache.poi:poi-ooxml:5.2.3'
+
+	// PDFs
+	implementation 'com.itextpdf:itext7-core:7.2.2'
+
+	// Dependencia de iText Core
+	implementation 'com.itextpdf:itext7-core:7.2.2' // Usa la versión que necesites
+	// Dependencia de iText Kernel (opcional si necesitas más características)
+	implementation 'com.itextpdf:kernel:7.2.2'
+	// Dependencia de iText Layout (para la manipulación de documentos)
+	implementation 'com.itextpdf:layout:7.2.2'
+
 
 }
 

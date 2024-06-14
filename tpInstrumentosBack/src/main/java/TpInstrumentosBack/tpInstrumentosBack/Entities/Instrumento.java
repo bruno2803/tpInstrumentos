@@ -22,6 +22,7 @@ public class Instrumento extends Base{
     private String modelo;
     private String imagen;
     private double precio;
+    private double costo;
     private String costoEnvio;
     private String cantidadVendida;
     private String descripcion;
@@ -29,4 +30,15 @@ public class Instrumento extends Base{
     @ManyToOne(optional = false)
     @JoinColumn(name = "idCategoria")
     private Categoria categoria;
+
+    public String getPrecioString() {
+        return String.valueOf(precio);
+    }
+
+    public String getcostoString() {
+        return String.valueOf(costo);
+    }
+    public String getCategoriaString() {
+        return categoria.getDenominacion();
+    }
 }

@@ -93,6 +93,39 @@ export async function createPreferenceMP(pedido?:Pedido){
     return await response.json() as PreferenceMp;   
 }
 
+export function getAllUsuarios(){
+    return fetch(`http://localhost:9000/api/usuarios`)
+            .then(res=>res.json())
+            .then(json=>json)
+}
+
+export async function getDatosLinea(){
+	const urlServer = 'http://localhost:9000/api/instrumentos/DataLine';
+	const response = await fetch(urlServer, {
+		method: 'GET',
+        headers: {
+			'Content-type': 'application/json',
+
+		},
+        mode: 'cors'
+	});
+	console.log(response);
+	return await response.json();
+}
+
+export async function getDatosTorta(){
+    const urlServer = 'http://localhost:9000/api/instrumentos/DataTorta';
+	const response = await fetch(urlServer, {
+		method: 'GET',
+        headers: {
+			'Content-type': 'application/json',
+		},
+        mode: 'cors'
+	});
+	console.log(response);
+	return await response.json();
+}
+
 /*export function getInstrumentosJSON() {
 
 	let datos: Instrumento[] = [

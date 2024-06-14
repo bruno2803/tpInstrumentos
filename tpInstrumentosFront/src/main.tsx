@@ -11,21 +11,76 @@ import { FormularioInstrumento } from './components/screens/FormularioInstrument
 import { CarritoContextProvider } from './context/CarritoContext'
 import { Carrito } from './components/screens/Carrito/Carrito'
 import { Pedidos } from './components/screens/Pedidos/Pedidos'
+import { Login } from './components/screens/Login/Login'
+import { RutaPrivada } from './ControlAcceso/RutaPrivada'
+import RolUsuario from './ControlAcceso/RolUsuario'
+import { Roles } from './entities/Roles'
+import { Estadisticas } from './components/screens/Estadisticas/Estadisticas'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
     <CarritoContextProvider>
     <Routes>
-      <Route index element={<Home/>}/>
-      <Route path='/home' element={<Home />}/>
+      //RUTAS PUBLICAS
+      <Route path='/login' element={<Login />}/>
+      <Route path='*' element={<Home/>}/>
+      <Route index element={<Home />}/>
+      <Route path='/home' element={<Home/>}/>
       <Route path='/dondeEstamos' element={<DondeEstamos />}/>
-      <Route path='/productos' element={<Productos />}/>
-      <Route path='/productoDetalle/:id' element={<ProductoDetalle/>}/>
-      <Route path='/grilla' element={<Grilla />}/>
-      <Route path='/FormularioInstrumento/:id' element={<FormularioInstrumento />}/>
-      <Route path='/pedidos' element={<Pedidos />}/>
-      <Route path="/carrito" element={<Carrito />}></Route>
+      //RUTAS PRIVADAS
+      <Route 
+        path='/productos' 
+        element={
+          <RutaPrivada>
+            <Productos />
+          </RutaPrivada>
+        }
+      />
+      <Route 
+        path='/productoDetalle/:id' 
+        element={
+          <RutaPrivada>
+            <ProductoDetalle />
+          </RutaPrivada>
+        }
+      />
+      <Route 
+        path='/grilla' 
+        element={
+          <RutaPrivada>
+            <Grilla />
+          </RutaPrivada>
+        }
+      />
+      <Route 
+        path='/pedidos' 
+        element={
+          <RutaPrivada>
+            <Pedidos />
+          </RutaPrivada>
+        }
+      />
+      <Route 
+        path='/carrito' 
+        element={
+          <RutaPrivada>
+            <Carrito />
+          </RutaPrivada>
+        }
+      />
+      <Route 
+        path='/estadisticas' 
+        element={
+          <RutaPrivada>
+            <Estadisticas/>
+          </RutaPrivada>
+        }
+      />
+      //RUTAS PRIVADAS Y CON ROL DE ADMIN
+      <Route element={<RolUsuario rol={Roles.ADMIN} />}>
+        <Route path="/FormularioInstrumento/:id" element={<FormularioInstrumento />} />
+      </Route>
     </Routes>
     </CarritoContextProvider>
     </BrowserRouter>

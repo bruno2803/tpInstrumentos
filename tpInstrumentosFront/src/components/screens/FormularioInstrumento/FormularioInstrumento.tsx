@@ -74,10 +74,10 @@ export const FormularioInstrumento = () => {
   return (
     <>
       <Header />
-      <div className="formularioContainer">
+      <div className="formularioContainer" style={{ marginTop: '100px' }}>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>{ id ? 'Agregar instrumento' : 'Modificar instrumento' }</Form.Label>
+            <Form.Label>AGREGAR / MODIFICAR: INSTRUMENTO</Form.Label>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -184,14 +184,22 @@ export const FormularioInstrumento = () => {
             />
           </Form.Group>
 
+          <Form.Group className="mb-3 contanierBtns">
+          <Button
+            href="/grilla"
+            className="btnFormularioCerrar"
+          >
+            <span className="material-symbols-outlined">close</span>
+          </Button>
           <Button
             onClick={save}
-            variant="primary"
             type="submit"
             className="btnFormularioAgregar"
           >
-            Agregar
-          </Button>
+            <span className="material-symbols-outlined">check</span>
+          </Button>           
+          </Form.Group>
+
         </Form>
       </div>
     </>

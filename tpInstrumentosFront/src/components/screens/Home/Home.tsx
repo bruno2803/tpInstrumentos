@@ -10,7 +10,7 @@ export const Home = () => {
         <>
             <Header />
             <div className="titleContainer" style={{ marginTop: '100px' }}>
-                <h1>MUSICAL HENDRIX</h1>
+                <h1>MUSIC STORE</h1>
             </div>
             <div className="carrouselContainer">
                 <Carrousel/>

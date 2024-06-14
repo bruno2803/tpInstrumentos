@@ -1,8 +1,9 @@
 package TpInstrumentosBack.tpInstrumentosBack;
 
 import TpInstrumentosBack.tpInstrumentosBack.Entities.Categoria;
-import TpInstrumentosBack.tpInstrumentosBack.Repositories.CategoriaRepository;
-import TpInstrumentosBack.tpInstrumentosBack.Repositories.InstrumentoRepository;
+import TpInstrumentosBack.tpInstrumentosBack.Entities.Enums.Roles;
+import TpInstrumentosBack.tpInstrumentosBack.Entities.Usuario;
+import TpInstrumentosBack.tpInstrumentosBack.Repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,33 +26,25 @@ public class TpInstrumentosBackApplication {
 	}
 
 	@Bean
-	CommandLineRunner init(InstrumentoRepository instrumentoRepository, CategoriaRepository categoriaRepository) {
+	CommandLineRunner init(InstrumentoRepository instrumentoRepository, CategoriaRepository categoriaRepository,
+						   PedidoDetalleRepository pedidoDetalleRepository,
+						   PedidoRepository pedidoRepository, UsuarioRepository usuarioRepository) {
 		return args -> {
 			System.out.println("-----------------ESTOY FUNCIONANDO---------");
 
-			Categoria categoria1 = Categoria.builder()
-					.denominacion("Cuerda")
+			Usuario usuario1 = Usuario.builder()
+					.usuario("Admin")
+					.clave("1234")
+					.rol(Roles.ADMIN)
 					.build();
+			usuarioRepository.save(usuario1);
 
-			Categoria categoria2 = Categoria.builder()
-					.denominacion("Viento")
+			Usuario usuario2 = Usuario.builder()
+					.usuario("Client")
+					.rol(Roles.USER)
+					.clave("5678")
 					.build();
-			Categoria categoria3 = Categoria.builder()
-					.denominacion("Percusion")
-					.build();
-
-			Categoria categoria4 = Categoria.builder()
-					.denominacion("Teclado")
-					.build();
-
-			Categoria categoria5 = Categoria.builder()
-					.denominacion("Electronico")
-					.build();
-			categoriaRepository.save(categoria1);
-			categoriaRepository.save(categoria2);
-			categoriaRepository.save(categoria3);
-			categoriaRepository.save(categoria4);
-			categoriaRepository.save(categoria5);
+			usuarioRepository.save(usuario2);
 		};
 	}
 

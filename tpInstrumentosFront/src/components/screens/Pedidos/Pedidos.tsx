@@ -20,7 +20,7 @@ export const Pedidos = () => {
   return (
     <>
       <Header />
-      <div className={pedidos.length < 1 ? "divVisible" : "divInvisible"} style={{ marginTop: '80px' }}>
+      <div className={pedidos.length < 1 ? "divVisible" : "divInvisible"} style={{ marginTop: '100px' }}>
         <h3 className="titleSinPedidos">No tienes pedidos realizados</h3>
       </div>
       <div className="containerItemPedido">

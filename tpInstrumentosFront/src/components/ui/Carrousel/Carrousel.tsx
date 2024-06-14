@@ -12,7 +12,7 @@ export const Carrousel = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <p className="p">Musical Hendrix es una tienda de instrumentos musicales con ya más de 15 años de
+                        <p className="p">Music Store es una tienda de instrumentos musicales con ya más de 15 años de
                             experiencia. Tenemos el conocimiento y la capacidad como para informarte acerca de las
                             mejores elecciones para tu compra musical. </p>
                     </Carousel.Caption>
@@ -24,7 +24,7 @@ export const Carrousel = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <p className="p">Musical Hendrix es una tienda de instrumentos musicales con ya más de 15 años de
+                        <p className="p">Music Store es una tienda de instrumentos musicales con ya más de 15 años de
                             experiencia. Tenemos el conocimiento y la capacidad como para informarte acerca de las
                             mejores elecciones para tu compra musical. </p>
                     </Carousel.Caption>
@@ -36,7 +36,7 @@ export const Carrousel = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <p className="p">Musical Hendrix es una tienda de instrumentos musicales con ya más de 15 años de
+                        <p className="p">Music Store es una tienda de instrumentos musicales con ya más de 15 años de
                             experiencia. Tenemos el conocimiento y la capacidad como para informarte acerca de las
                             mejores elecciones para tu compra musical. </p>
                     </Carousel.Caption>
