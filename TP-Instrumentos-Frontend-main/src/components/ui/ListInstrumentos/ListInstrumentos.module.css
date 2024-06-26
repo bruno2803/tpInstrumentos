@@ -1,0 +1,36 @@
+.containerPrincipalList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--letrasColor);
+}
+
+.containerTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+}
+
+.searchBox {
+  width: 85vw;
+  padding: 1vh 0;
+}
+
+.icon {
+  color: var(--letrasColor);
+  /* margin-right: 8px; */
+}
+
+.containerList {
+  display: grid;
+  width: 85vw;
+  padding: 2vh;
+  gap: 1vh;
+  max-height: 80vh;
+}

@@ -1,0 +1,20 @@
+.generateExcelButton {
+  display: flex;
+  align-items: center;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.generateExcelButton:hover {
+  background-color: rgb(0, 95, 0);
+}
+
+.icon {
+  margin-right: 8px;
+}

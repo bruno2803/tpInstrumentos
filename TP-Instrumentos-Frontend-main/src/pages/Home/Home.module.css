@@ -1,0 +1,12 @@
+.homeContainer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.carrouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

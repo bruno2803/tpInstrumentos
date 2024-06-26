@@ -1,0 +1,155 @@
+/* ProductosTabla.module.css */
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+}
+
+.table {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.excelSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.dateInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.dateLabel {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dateInput {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.th,
+.td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--primary-border-color);
+  cursor: pointer;
+}
+
+.th {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  user-select: none;
+}
+
+.th:hover {
+  background-color: var(--hover-background-color);
+}
+
+.tr:hover {
+  background-color: var(--hover-background-color);
+}
+
+.instrumento-nombre {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-edit {
+  background-color: green;
+  color: var(--button-text-color);
+}
+
+.button-delete {
+  background-color: red;
+  color: var(--button-text-color);
+}
+
+.button-add {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 10px;
+  margin-bottom: 10px; /* Espacio debajo del botón */
+  margin-right: 3vw;
+  float: right;
+}
+
+.filterSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: var(--backgroundColor);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45%;
+}
+
+.filterLabel {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+.filterSelectContainer {
+  position: relative;
+}
+
+.filterSelect {
+  padding: 8px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 4px;
+  background-color: var(--input-background-color);
+  color: var(--primary-text-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+}
+
+.filterSelect::-ms-expand {
+  display: none;
+}
+
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primary-text-color); /* Color de la flecha */
+}
