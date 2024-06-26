@@ -48,6 +48,16 @@ export const NavBar = () => {
                   </Link>
                 </Nav.Item>
               )}
+              {isAuthenticated && (role == "DEVELOPER" || role == "ADMIN") && (
+              <Nav.Item className={styles.navItem}>
+                <Link
+                  to={"/pedidos"}
+                  className={`${styles.navLink} nav-link`}
+                >
+                  Pedidos
+                </Link>
+              </Nav.Item>
+            )}
             {isAuthenticated && (role == "DEVELOPER" || role == "ADMIN") && (
               <Nav.Item className={styles.navItem}>
                 <Link

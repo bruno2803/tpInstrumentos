@@ -156,7 +156,7 @@ export const ProductosTabla: FC = () => {
 
   return (
     <>
-      <Box sx={{ marginTop: "20px" }}>
+      <Box sx={{ display:'flex', marginTop: "20px", marginLeft:'49%' }}>
         {isAuthenticated && (role === "DEVELOPER" || role === "ADMIN") && (
           <Box>
             <Button
@@ -168,47 +168,7 @@ export const ProductosTabla: FC = () => {
             </Button>
           </Box>
         )}
-        <Box>
-          {isAuthenticated && (role == "DEVELOPER" || role == "ADMIN") && (
-            <Box>
-              <div className={styles.excelSection}>
-                <Box>
-                  <div className={styles.dateInputContainer}>
-                    <label className={styles.dateLabel} htmlFor="startDate">
-                      Desde:
-                    </label>
-                    <input
-                      type="date"
-                      id="startDate"
-                      value={startDate}
-                      onChange={(e) => setStartDate(e.target.value)}
-                      className={styles.dateInput}
-                    />
-                  </div>
-                </Box>
-                <Box>
-                  <div className={styles.dateInputContainer}>
-                    <label className={styles.dateLabel} htmlFor="endDate">
-                      Hasta:
-                    </label>
-                    <input
-                      type="date"
-                      id="endDate"
-                      value={endDate}
-                      onChange={(e) => setEndDate(e.target.value)}
-                      className={styles.dateInput}
-                    />
-                  </div>
-                </Box>
-                <Box>
-                  <GenerateExcel startDate={startDate} endDate={endDate} />
-                </Box>
-              </div>
-            </Box>
-          )}
-        </Box>
       </Box>
-
       <Box className={styles.filterSection}>
         <Form.Group controlId="categoriaFiltro" className={styles.filterGroup}>
           <Form.Label className={styles.filterLabel}>

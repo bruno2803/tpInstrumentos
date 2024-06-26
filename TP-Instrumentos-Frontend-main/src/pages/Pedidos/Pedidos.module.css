@@ -1,0 +1,41 @@
+.titleSinPedidos {
+  margin-left: 500px;
+}
+
+.containerItemPedido {
+  margin-left: 50px;
+}
+
+.divVisible {
+  visibility: visible;
+}
+
+.divInvisible {
+  visibility: hidden;
+}
+
+.excelSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.dateInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.dateLabel {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dateInput {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
